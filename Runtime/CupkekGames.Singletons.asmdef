@@ -1,6 +1,6 @@
 {
-    "name": "CupkekGames.Singleton",
-    "rootNamespace": "CupkekGames.Singleton",
+    "name": "CupkekGames.Singletons",
+    "rootNamespace": "CupkekGames.Singletons",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

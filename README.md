@@ -4,7 +4,7 @@ A single-file `MonoBehaviour` singleton base class extracted from `com.cupkekgam
 
 ## What's inside
 
-**Runtime** (`CupkekGames.Singleton.asmdef`)
+**Runtime** (`CupkekGames.Singletons.asmdef`)
 
 - `Singleton<T>` — abstract MonoBehaviour base. First instance survives via `DontDestroyOnLoad`; duplicates are destroyed in `Awake`.
 

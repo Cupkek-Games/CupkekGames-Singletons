@@ -1,7 +1,7 @@
 {
-  "name": "com.cupkekgames.singleton",
-  "displayName": "CupkekGames Singleton",
-  "version": "0.1.0",
+  "name": "com.cupkekgames.singletons",
+  "displayName": "CupkekGames Singletons",
+  "version": "0.1.1",
   "author": {
     "name": "CupkekGames",
     "url": "https://www.docs.cupkek.games"

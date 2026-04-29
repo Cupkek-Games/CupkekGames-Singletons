@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace CupkekGames.Singleton
+namespace CupkekGames.Singletons
 {
   // Singleton pattern that ensures only one instance of the class exists and provides global access.
   public abstract class Singleton<T> : MonoBehaviour where T : Component
