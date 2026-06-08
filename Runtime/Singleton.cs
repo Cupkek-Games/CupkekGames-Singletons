@@ -17,9 +17,15 @@ namespace CupkekGames.Singletons
     #region Properties
 
     /// <summary>
-    /// Gets the singleton instance.
+    /// Gets the singleton instance, or null if it has been destroyed. The
+    /// <c>!= null</c> guard returns null for a destroyed ("fake-null") instance —
+    /// otherwise, under "Enter Play Mode Without Domain Reload", this static can
+    /// hand back the previous session's destroyed object. (A generic type can't use
+    /// <c>[RuntimeInitializeOnLoadMethod]</c> to reset the static per-T, so the
+    /// getter guards instead; <see cref="Awake"/> already re-claims it via the same
+    /// <c>== null</c> check.)
     /// </summary>
-    public static T Instance => _instance;
+    public static T Instance => _instance != null ? _instance : null;
 
     #endregion
 
