@@ -40,7 +40,14 @@ namespace CupkekGames.Singletons
       {
         _instance = this as T;
 
-        DontDestroyOnLoad(gameObject);
+        // DontDestroyOnLoad only works on root GameObjects — a child rides on
+        // its root's lifetime (e.g. a managers prefab whose root the spawner
+        // already marked DontDestroyOnLoad). Calling it on a child is a no-op
+        // that logs a warning, so skip it.
+        if (transform.parent == null)
+        {
+          DontDestroyOnLoad(gameObject);
+        }
       }
       else
       {
