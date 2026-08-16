@@ -1,16 +1,19 @@
+using Unity.Scripting.LifecycleManagement;
 using UnityEngine;
 
 namespace CupkekGames.Singletons
 {
   // Singleton pattern that ensures only one instance of the class exists and provides global access.
-  public abstract class Singleton<T> : MonoBehaviour where T : Component
+  public abstract partial class Singleton<T> : MonoBehaviour where T : Component
   {
     #region Fields
 
     /// <summary>
-    /// The static instance.
+    /// The static instance. Cleared per play session by the generated statics
+    /// cleanup, so it cannot hand back the previous session's object when Enter
+    /// Play Mode skips the domain reload.
     /// </summary>
-    private static T _instance;
+    [AutoStaticsCleanup] private static T _instance;
 
     #endregion
 

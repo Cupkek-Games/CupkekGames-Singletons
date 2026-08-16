@@ -6,7 +6,7 @@
     "name": "CupkekGames",
     "url": "https://www.docs.cupkek.games"
   },
-  "unity": "6000.0",
+  "unity": "6000.5",
   "documentationUrl": "https://docs.cupkek.games/",
   "description": "MonoBehaviour singleton base class. Single-file foundation extracted from CupkekGames Core so consumers can opt in without pulling unrelated subsystems.",
   "keywords": [
